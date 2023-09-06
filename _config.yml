@@ -22,9 +22,13 @@ author: Zhang haoran(张浩然)
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+    - C/C++: "https://beautifuljekyll.com"
+    - Socket Programming: "https://www.markdowntutorial.com/"
+    - Probability and Statistical :
+    - Quantitative Trading:
+    - DevOps:
+    - Computer Arch:
+  Author's home: "https://honky-tonk.github.io/"
 
 ################
 # --- Logo --- #
