@@ -22,8 +22,8 @@ author: Zhang haoran(张浩然)
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - C/C++: "https://beautifuljekyll.com"
-    - Socket Programming: "https://www.markdowntutorial.com/"
+    - C/C++: 
+    - Socket Programming: 
     - Probability and Statistical :
     - Quantitative Trading:
     - DevOps:
