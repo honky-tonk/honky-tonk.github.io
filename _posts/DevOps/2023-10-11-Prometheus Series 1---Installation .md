@@ -134,5 +134,31 @@ root@k8s-master:~/prometheus-2.47.1.linux-amd64# systemctl status prometheus
 10月 11 20:17:48 k8s-master prometheus[17966]: ts=2023-10-11T12:17:48.756Z caller=manager.go:1009 level=info component="rule manager" msg="Starting rule mana>
 ```
 
+# Install Grafana
 
+now we install grafana and set to connection prometheus.
 
+first we need the install dependencies
+
+```
+root@k8s-master:~# sudo apt-get install -y apt-transport-https software-properties-common
+```
+
+then add the apt-key we will use apt-key during grafana installnation
+```
+root@k8s-master:~# wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+```
+
+get the grafana source list file
+```
+root@k8s-master:~# echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+``` 
+then we update 
+```
+root@k8s-master:~# sudo apt-get update
+```
+
+final install grafana
+```
+root@k8s-master:~# apt-get install grafana
+```
