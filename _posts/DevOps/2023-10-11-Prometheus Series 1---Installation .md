@@ -2,7 +2,7 @@
 layout: post
 title: Prometheus Series 1 --- Installation
 subtitle: 
-gh-repo: daattali/beautiful-jekyll
+gh-repo: honky-tonk/honky-tonk.github.io
 gh-badge: [star, fork, follow]
 tags: [DevOps]
 comments: true
