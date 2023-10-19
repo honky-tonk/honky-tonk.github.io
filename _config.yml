@@ -22,11 +22,11 @@ author: Zhang haoran(张浩然)
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - C/C++: "https://honky-tonk.github.io/categories/c++_index"
+    - C/C++: "https://honky-tonk.github.io/categories/C++/c++_index"
     - Socket Programming: 
     - Probability and Statistical :
     - Quantitative Trading:
-    - DevOps: "https://honky-tonk.github.io/categories/devops_index"
+    - DevOps: "https://honky-tonk.github.io/categories/DevOps/devops_index"
     - Computer Arch:
   Author's home: "https://honky-tonk.github.io/"
 
