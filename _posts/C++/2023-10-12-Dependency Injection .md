@@ -3,7 +3,7 @@ layout: post
 title: C++ dependency injection
 subtitle: 
 gh-repo: honky-tonk/honky-tonk.github.io
-gh-badge: [star, fork, follow]
+gh-badge: [star,follow]
 tags: [C++]
 comments: true
 ---
