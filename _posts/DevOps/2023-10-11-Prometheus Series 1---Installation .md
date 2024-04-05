@@ -10,7 +10,7 @@ comments: true
 # Preface
 Promethues is funded in 2012, and widly used since Cloud-Native become popular, in this article, we install prometheus above Ubuntu 21.04
 
-why i didn't install prometheus in kubernetes use prometheus-operator? because i haven't found the solution of when kubernetes down how prometheus is available yet(maybe multiple k8s cluster each have a promethues monitor and detect each other etc... it's much complex), so i install prometheus in ubuntu directly
+why i didn't install prometheus in kubernetes use prometheus-operator? because i want to build a scalable monitor cluster which can scale as the number of cluster increase, so with first stage i install prometheus in ubuntu directly as master prometheus server
 
 # Environment
 - OS:Ubuntu 20.04.6
