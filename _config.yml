@@ -23,8 +23,10 @@ navbar-links:
   About Me: "aboutme"
   Resources:
     - C/C++: "https://honky-tonk.github.io/categories/C++/c++_index"
-    - Probability and Statistical :
-    - Quantitative Trading:
+    - Probability and Statistical: "https://honky-tonk.github.io/categories/Prob_Stat/Prob_Stat"
+    - Parallel Programming: "https://honky-tonk.github.io/categories/Parallel_Programming/Parallel_Programming"
+    - Machine Learning: "https://honky-tonk.github.io/categories/Machine_Learning/Machine_Learning"
+    - Quantitative Trading: 
     - DevOps: "https://honky-tonk.github.io/categories/DevOps/devops_index"
     - Computer Arch:
   Author's home: "https://honky-tonk.github.io/"
