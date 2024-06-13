@@ -23,7 +23,7 @@ navbar-links:
   About Me: "aboutme"
   Resources:
     - C/C++: "https://honky-tonk.github.io/categories/C++/c++_index"
-    - Probability and Statistical: "https://honky-tonk.github.io/categories/Prob_Stat/Prob_Stat"
+    - Probability&&Statistical: "https://honky-tonk.github.io/categories/Prob_Stat/Prob_Stat"
     - Parallel Programming: "https://honky-tonk.github.io/categories/Parallel_Programming/Parallel_Programming"
     - Machine Learning: "https://honky-tonk.github.io/categories/Machine_Learning/Machine_Learning"
     - Quantitative Trading: 
@@ -110,7 +110,7 @@ feed_show_tags: true
 post_search: true
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
-edit_page_button: true
+edit_page_button: false
 
 # Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
 # If this setting is off, then long sub-menu words might get cut off
