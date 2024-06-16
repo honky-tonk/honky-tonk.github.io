@@ -12,3 +12,4 @@ comments: true
 [Prometheus Series 2 --- monitor your node!!!](https://honky-tonk.github.io/2023-10-12-Prometheus-Series-2-monitor-your-node/)
 
 [Prometheus Series 3 --- prometheus federated](https://honky-tonk.github.io/2023-10-17-Prometheus-Series-3-prometheus-federated/) -->
+[Sample Distribution and  Confidence Intervals](https://honky-tonk.github.io/2024-04-23-Sample-Distribution-and-Confidence-Intervals/)
