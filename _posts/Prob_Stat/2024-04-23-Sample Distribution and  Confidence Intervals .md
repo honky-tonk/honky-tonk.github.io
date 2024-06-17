@@ -7,6 +7,9 @@ gh-badge: [star,follow]
 tags: [Stat]
 comments: true
 ---
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 # Preface
 Parameter:A parameter is a fixed value or characteristic used to describe a population, like population mean population standard deviation
 
