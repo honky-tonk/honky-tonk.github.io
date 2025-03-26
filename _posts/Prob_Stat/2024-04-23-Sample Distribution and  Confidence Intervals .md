@@ -25,7 +25,7 @@ Standard Deviation(Sample):$\sqrt{\frac{\sum_{i=1}^n(x_i-\bar{x}^2)}{n-1}}$
 Standard Error:$\frac{\sigma}{\sqrt{n}}$
 > $\sigma$ is sample standard deviation, $n$ is sample size
 
->SE is the **standard deviation** of its sampling distribution, in other word SE is for multi sample
+>SE is the **standard deviation** of mean of many sampling mean(mean of X_1, X_2,...,X_n which X_1,X_2,...,X_n is sample mean)
 
 Z-Score(**one** sample): $\frac{x-\mu}{\sigma}$
 >x is obvious value, $\mu$ is sample mean, $\sigma$ is sample standard deviation
@@ -66,6 +66,20 @@ for (i in 1:R){
 hist(sample_means, breaks = 3, xlim = c(0, 32))
 ```
 we got population vector from 0 to 32, then we count the sample 10^5 times
+
+for this time As long as the sample size is large, the distribution of the sample means will follow an approximate Normal distribution. this also call central limit theorem
+> - If the population is skewed and sample size small, then the sample mean won't be normal.
+> - When doing a simulation, one replicates the process many times. Using 10,000 replications is a good idea.
+
+
+so we could prove SE formula， first we should keep in mind **SE is the **standard deviation** of mean of many sampling mean(mean of X_1, X_2,...,X_n which X_1,X_2,...,X_n is sample mean)**
+
+$
+\text SE^2=Var(\bar{X})={Var}\left(\frac{1}{n} \sum_{i=1}^{n} X_i\right) = \frac{1}{n^2} \text{Var}\left(\sum_{i=1}^{n} X_i\right)=\frac{1}{n^2}* n * \sigma^2=\frac{\sigma^2}{n}
+$
+
+the $\sigma$ is population standard deviation, why $Var(X_i)=\sigma$ ? when $X_i$ is sample, because $X_i$ is large sum of sample size compare to population
+
 
 # Z-Score
 

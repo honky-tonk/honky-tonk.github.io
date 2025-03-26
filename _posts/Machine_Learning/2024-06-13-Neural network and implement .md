@@ -79,6 +79,13 @@ so we got new neural figure
 ![single neural](https://honky-tonk.github.io/assets/img/neural/neurol_network_with_activation_function.jpg)
 
 # sigmoid vs ReLu
+Before we dive into sigmoid and ReLU, we need have some basic knowledge of Backpropagation.
+
+![simple neural](https://honky-tonk.github.io/assets/img/neural/simple_neurol_network.jpg)
+
+
+The first goal we aim is find the relation of W2 and Loss function  
+P_outpur(P_o) is predict output, we assume R_o is real output, then we got the loss $$L=(P_o-R_o)^2$$, and we know $$P_o=a(W_2*Y + bias_2)$$,$$L'=2(P_o-R_o)P_o'$$ first $$\frac{\partial L}{\partial W_2}=\frac{\partial P_o}{\partial W_2}\frac{\partial Y}{\partial P_o}\frac{\partial W_2}{\partial Y}=$$
 
 # RNN
 ## LSTM
