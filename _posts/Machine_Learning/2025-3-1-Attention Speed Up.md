@@ -136,7 +136,37 @@ In other workload(not chatbot) like code generation, if one prompt have two or m
 
 ![LogicalBlockMapToPhysicalBlock](https://honky-tonk.github.io/assets/img/2025031/LogicalBlockMapToPhysicalBlock.png)
 
-![TwoLogicalBlockSharingOnePhysicalBlock.png](https://honky-tonk.github.io/assets/img/2025031/TwoLogicalBlockSharingOnePhysicalBlock.png)
+![TwoLogicalBlockSharingOnePhysicalBlock](https://honky-tonk.github.io/assets/img/2025031/TwoLogicalBlockSharingOnePhysicalBlock.png)
 
 # How Sglang work
 
+In inference Workload, There are many CPU overhand(Like Vllm old version), CPU workload and GPU workload are serialization, inference process start with cpu work recieve user request then pass the prompt to GPU, CPU wait for GPU result then return to user
+
+![CPU_Overhead](https://honky-tonk.github.io/assets/img/2025031/CPU_Overhead.png)
+
+this process we could code like below
+```
+while True:
+    recv_reqs = recv_requests() //recive user's prompt
+    process_input_request(recv_reqs) //analysis the request like the length of prompt...
+    batch = get_next_batch_to_run() // combine the same token length of prompt to a batch
+    result = run_batch(batch) //throw to GPU run
+    process_batch_result(batch, result) //get result to CPU and return to user
+```
+Due to this bottleneck, sglangd overlapped this process, when GPU is running, CPU handle user's prompt and process to batch till GPU idle, the overlap version list below
+```
+last_batch = None
+while True:
+    recv_reqs = recv_requests()
+    process_input_requests(recv_reqs)
+    batch = get_next_batch_to_run()
+    result = run_batch(batch)
+    result_queue.put((batch, result))
+    if last_batch is not None:
+        tmp_batch, tmp_result = result_queue.get()
+        process_batch_result(tmp_batch, tmp_result)
+    last_batch = batch.copy()
+``` 
+the code ```run_batch()``` is no-blocking, the result of ```run_batch()``` return maybe null(case no-blocking, ```run_batch()``` return immediately which job is done.), then push the batch and result to queue(maybe null but the space is pre-allocate) 
+
+this is front-end of sglang, what is back-end sglang look like? the backend  attention technology combine **paged attention**(for memory manage) and **RadixAttention**(for accelerate attention execution) 

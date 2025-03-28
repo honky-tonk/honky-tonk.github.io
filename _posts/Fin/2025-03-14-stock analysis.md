@@ -36,4 +36,16 @@ Non-current assets list below
 - Deferred Revenue: Money received by a company for goods or services that have not yet been delivered or performed. It represents an obligation to provide products or services in the future.
 - Commercial Paper: A short-term, unsecured debt instrument issued by corporations to raise funds for short-term obligations, such as payroll or accounts payable. It usually has a maturity of less than a year. 
 
+> many people calculate **debet** use ```commercial paper + current portion of long-term debet + long-term debet```, the current portion of long-term debet not overlap with long-term debet usually, the current portion of long-term debet mean DDL less then one year's debet of long-term
 
+Enterprise Value = Market Cap - Cash + debet
+> Enterprise Value mean cost of you buy a whole company, which mean the cash of company you has owned when you buy a company meanwhile you will have debet
+
+Book Value = Shareholder's Equity = total asset - total liabilities
+
+P/B ratio = stock price / book value pre share
+> P/B > 1 mean company may overrate, P/B < 1 mean company may underrate, in tech company the P/B ratio may has no sense, because many value of tech(like tech, patent) will not count into balance sheet
+
+# Income Statement
+
+what is **revenue** ? 
